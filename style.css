@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.home-page-container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.side-bar {
+    background-color: #212A31;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.header {
+    background-color: #748D94;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.home-page-content {
+    background-color: #D3D9D4;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+    font-size: max(1rem, 1.5vw);
+    margin-top: 3rem;
+}
+
+li {
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 6px;
+
+    &:hover {
+        cursor: pointer;
+        animation: slide-right 0.3s ease-out;
+        animation-direction: normal;
+        animation-fill-mode: both;
+    }
+}
+@keyframes slide-right {
+    0% {
+        transform: translate(0);
+    } 100% {
+        transform: translateX(20px);
+    }
+}
+li > svg {
+    display: inline;
+    height: 100%;
+    width: 12%;
+    fill: white;
+}
+
+li > .pages-text {
+    margin-top: 1%;
+    margin-left: 10px;
+}
+
+li > .help-text {
+    margin-top: 1%;
+    margin-left: 10px;
+}
+
+.div-1 {
+    display: flex;
+}
+.search-bar {
+    margin: 2%;
+    display: flex;
+    width: 70%;
+    height: 2rem;
+}
+.search-bar > svg {
+    height: 100%;
+    margin-right: 1%;
+}
+
+.account-info {
+    display: flex;
+    justify-content: end;
+    margin: 2%;
+    width: 30%;
+    height: 3rem;
+    gap: 3%;
+}
+
+.profile-photo {
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.user-name {
+    margin-top: 2%;
+    color: rgb(211, 211, 211);
+    font-weight: 900;
+    font-size: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
