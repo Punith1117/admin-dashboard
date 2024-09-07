@@ -64,12 +64,7 @@ li > svg {
     fill: white;
 }
 
-li > .pages-text {
-    margin-top: 1%;
-    margin-left: 10px;
-}
-
-li > .help-text {
+li > .pages-text + .help-text {
     margin-top: 1%;
     margin-left: 10px;
 }
@@ -95,9 +90,10 @@ li > .help-text {
     width: 30%;
     height: 3rem;
     gap: 3%;
+
 }
 
-.profile-photo {
+.account-info .profile-photo {
     height: 3rem;
     width: 3rem;
     border: 1px solid rgb(173, 173, 173);
@@ -105,10 +101,141 @@ li > .help-text {
     overflow: hidden;
 }
 
-.user-name {
+.account-info .user-name {
     margin-top: 2%;
     color: rgb(211, 211, 211);
     font-weight: 900;
     font-size: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.div-2 {
+    display: flex;
+}
+
+.user {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    margin-left: 2vw;
+    margin-bottom: 0.5%;
+    gap: 1rem;
+}
+.greet-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.user .profile-photo {
+    width: 20%;
+    border: 1px solid rgb(155, 61, 61);
+    border-radius: 60%;
+    overflow: hidden;
+}
+
+.user .profile-photo img {
+    height: 100%;
+    width: 100%;
+}
+
+.greet-user .user-name {
+    margin-top: 2%;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: max(2vw, 1.5rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.user-action {
+    margin-top: 1%;
+    display: flex;
+    justify-content: end;
+    width: 60%;
+    gap: 3%;
+    margin-right: 3%;
+}
+
+.user-action-button {
+    width: 10%;
+    height: 40%;
+    border-radius: 10%;
+    border: 2px dotted rgb(118, 143, 172);
+    background-color: #D3D9D4;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgb(107, 107, 107);
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        background-color: rgb(92, 92, 92);
+        transform: scale(0.9);
+        color: rgb(197, 197, 197);
+    }
+}
+
+.home-page-content {
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+}
+
+.user-projects-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-auto-rows: 25rem;
+    gap: 3rem;
+    margin: 2rem;
+    border: 2px solid rgba(255, 0, 0, 0);
+    position: relative;
+}
+
+.user-projects-section::before {
+    content: 'Your projects';
+    position: absolute;
+    font-size: 2rem;
+    top: -2rem;
+    text-indent: 1rem;
+    color: #027092;
+    text-shadow: 3px 3px 6px black;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.user-project {
+    background-color: white;
+    border-radius: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    padding: 2%;
+    &:hover {
+        cursor: default;
+        box-shadow: 8px 8px 5px rgb(104, 154, 177);
+    }
+}
+
+.user-project .project-utility {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+    margin-top: auto;
+    gap: 5%;
+}
+
+.user-project .project-utility svg {
+    width: 10%;
+    height: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.user-project-name {
+    font-size: max(2rem, 2vw);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.user-project-description {
+    font-size: max(1.5rem, 1.5vw);
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
